@@ -1,0 +1,425 @@
+/* Custom CSS for AI Website Builder Website */
+
+/* Define color variables for a harmonious palette */
+:root {
+  --primary-color: #26547C; /* A more modern blue shade */
+  --secondary-color: #EF476F; /* A bright and engaging secondary color */
+  --background-color: #F7FFF7; /* A light and clean background color */
+  --text-color: #073B4C; /* A darker color for readability */
+  --link-color: #06D6A0; /* A pleasant green for links and buttons */
+  --testimonial-bg-color: #e9ecef; /* Specific color for testimonials section */
+  --chatbot-bg-color: #fff; /* Specific color for chatbot background */
+  --chatbot-border-color: #ccc; /* Border color for chatbot elements */
+}
+
+/* Ensure that the body has no margin for full width sections */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Navigation Menu Styles */
+.navbar {
+  background-color: var(--primary-color);
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  margin-right: 1rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--secondary-color);
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    margin-right: 0;
+  }
+}
+
+/* Start of Hero Section Styles */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  background: url('path-to-background-image.jpg') no-repeat center center; /* Actual path to the background image */
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  padding: 0;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+}
+
+.hero-headline {
+  position: relative;
+  color: white;
+  z-index: 1;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.hero-cta-button {
+  position: relative;
+  z-index: 1;
+  font-size: 1.25rem;
+  padding: 10px 20px;
+  color: white;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: fadeInUp 1s 0.5s ease-in-out forwards; /* Corrected animation-fill-mode property */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* End of Hero Section Styles */
+
+/* Features Section Styles */
+.features-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.features-section h2,
+.testimonials-section h2,
+.email-signup-section h2,
+.portfolio-section h2,
+.about-us-section h2,
+.pricing-section h2,
+.blog-section h2,
+.contact-us-section h2,
+.error-404-section h2 {
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+/* Demo Video Section Styles */
+.demo-video-section {
+  padding: 50px 0;
+}
+
+/* Portfolio Section Styles */
+.portfolio-section {
+  padding: 50px 0;
+}
+
+/* Portfolio Carousel Styles */
+.carousel .carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  background-size: cover;
+}
+
+/* Portfolio Modal Styles */
+.modal-lg {
+  max-width: 80%;
+}
+
+/* Testimonials Section Styles */
+.testimonials-section {
+  padding: 50px 0;
+  background-color: var(--testimonial-bg-color);
+  text-align: center;
+}
+
+.testimonial {
+  padding: 20px;
+  font-style: italic;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.testimonial-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.testimonial-footer {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Email Signup Form Styles */
+.email-signup-section {
+  padding: 50px 0;
+}
+
+.email-signup-section form {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+}
+
+.site-footer a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.site-footer a:hover {
+  color: var(--link-color);
+}
+
+/* About Us Section Styles */
+.about-us-section {
+  padding: 50px 0;
+}
+
+.team-bios {
+  margin-top: 30px;
+}
+
+.team-bios .col-md-4,
+.company-vision .col-md-4 {
+  margin-bottom: 30px;
+}
+
+/* Pricing Section Styles */
+.pricing-section {
+  padding: 50px 0;
+}
+
+.pricing-card-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Blog Section Styles */
+.blog-section {
+  padding: 50px 0;
+}
+
+#blog-posts {
+  margin-top: 30px;
+}
+
+/* Contact Us Section Styles */
+.contact-us-section {
+  padding: 50px 0;
+}
+
+.contact-form {
+  margin-bottom: 30px;
+}
+
+/* 404 Error Section Styles */
+.error-404-section {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.error-404-section .display-1 {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.error-404-section .lead {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* AI Chatbot Section Styles */
+.ai-chatbot-section {
+  padding: 20px 0;
+  background-color: var(--chatbot-bg-color);
+  text-align: center;
+}
+
+.chatbot {
+  background-color: var(--chatbot-bg-color);
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+}
+
+.chatbot-messages {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid var(--chatbot-border-color);
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+#chatbot-input {
+  width: calc(100% - 110px);
+  padding: 10px;
+  margin-right: 5px;
+  border: 1px solid var(--chatbot-border-color);
+  border-radius: 5px;
+  display: inline-block;
+}
+
+#chatbot-send-btn {
+  width: 100px;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#chatbot-send-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Unique Features Section Styles */
+.unique-features-section {
+  padding: 50px 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design Breakpoints */
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  /* Responsive styles for About Us, Pricing, Blog, Contact Us, and Error 404 pages */
+  .about-us-section,
+  .pricing-section,
+  .blog-section,
+  .contact-us-section,
+  .error-404-section {
+    padding: 20px 10px;
+  }
+
+  .team-bios .col-md-4,
+  .company-vision .col-md-4 {
+    margin-bottom: 15px;
+  }
+
+  .error-404-section .display-1 {
+    font-size: 3rem;
+  }
+
+  .error-404-section .lead {
+    font-size: 1rem;
+  }
+
+  /* Adjustments for Unique Features Section on smaller screens */
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  /* Chatbot messages stack vertically on smaller screens */
+  .chatbot-messages {
+    /* No flex-direction property as per reviewer's note */
+    margin-bottom: 10px;
+  }
+
+  /* Chatbot input and button stack vertically on smaller screens */
+  #chatbot-input,
+  #chatbot-send-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
